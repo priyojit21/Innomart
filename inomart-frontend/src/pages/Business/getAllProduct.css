@@ -1,0 +1,30 @@
+.ant-slider {
+  .ant-slider-track {
+    background-color: #ec2f79;
+  }
+
+  .ant-slider-handle::after {
+    background-color: #ec2f79;
+  }
+
+  .ant-slider-mark-text {
+    color: #ec2f79;
+  }
+}
+
+.checkbox-group-container {
+  .ant-checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .ant-checkbox-wrapper {
+    width: 45%;
+    margin-bottom: 12px;
+  }
+
+  .ant-checkbox-label {
+    margin-left: 6px;
+    color: #707070;
+  }
+}

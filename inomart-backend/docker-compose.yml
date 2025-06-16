@@ -1,0 +1,16 @@
+services:
+  # MongoDB Service
+  mongo_db:
+    container_name: inomart
+    image: mongo:latest
+    ports:
+      - "5005:27017"
+    volumes:
+      - mongo_data:/data/db
+
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: inomart  # Username
+      MONGO_INITDB_ROOT_PASSWORD: 1234  # Password
+
+volumes:
+  mongo_data:

@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ant-carousel .slick-dots li button {
+  background: #ae0043;
+  z-index: -10 !important;
+}
+
+.rating-wrapper .ant-rate {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ant-progress-text {
+  display: none;
+}
+
+.ant-select-selector:focus {
+  outline: none !important;
+}
+
+.ant-select-arrow {
+  right: 20px !important;
+  /* top: 25px !important; */
+}
+
+.progress-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ant-progress-steps-item {
+  height: 21px !important;
+  width: 7px !important;
+  margin-right: 1px !important;
+  border-radius: 2px;
+}
+
+.ant-progress-text {
+  display: none !important;
+}
+
+.ant-progress-steps-item-active {
+  background-color: #ec2f79 !important;
+}
+
+.ant-progress-steps-item {
+  background-color: #e4e9f1;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.ant-select-selector {
+  background-color: #ffffff !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px !important;
+}
+
+.ant-select-selection-placeholder {
+  text-align: left !important;
+  color: #b0b3b6 !important;
+  padding-left: 7px !important;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.animated-underline {
+  position: relative;
+  cursor: pointer;
+  color: #0c0c0c;
+  transition: color 0.3s ease;
+}
+
+.animated-underline:hover {
+  color: #1a1918;
+}
+
+.animated-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 2px;
+  width: 0;
+  background-color: #ffbd17;
+  transition: width 0.3s ease;
+}
+
+.animated-underline:hover::after {
+  width: 100%;
+}
+
+.ant-rate-star-zero .ant-rate-star-first,
+.ant-rate-star-zero .ant-rate-star-second {
+  color: #828282 !important;
+}

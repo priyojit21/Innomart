@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Invoice - {{InvoiceId}}</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 40px;
+            background-color: #f9f9f9;
+        }
+
+        .invoice-box {
+            max-width: 800px;
+            margin: auto;
+            padding: 30px;
+            border: 1px solid #eee;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+            background: #fff;
+            color: #333;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            margin: 0;
+            color: #333;
+        }
+
+        .info-table,
+        .items-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        .info-table td {
+            padding: 5px;
+            vertical-align: top;
+        }
+
+        .items-table th {
+            background: #eee;
+            text-align: left;
+        }
+
+        .items-table th,
+        .items-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        .total {
+            text-align: right;
+            padding: 10px;
+            font-size: 18px;
+            border-top: 2px solid #eee;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="invoice-box">
+        <div class="header">
+            <h1>INVOICE</h1>
+            <p>
+                Invoice #: {{InvoiceId}}<br>
+                Date: {{date}}
+            </p>
+        </div>
+
+        <table class="info-table">
+            <tr>
+                <td>
+                    <strong>Billed To:</strong><br>
+                    {{name}}<br>
+                    {{BillingAddress.address}}<br>
+                    {{BillingAddress.zipCode}}, {{BillingAddress.country}}
+                </td>
+                <td>
+                    <strong>From:</strong><br>
+                    InnoMart<br>
+                    Salt Lake City, Kolkata<br>
+                    India
+                </td>
+            </tr>
+        </table>
+
+        <table class="items-table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each items}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{quantity}}</td>
+                    <td>₹{{price}}</td>
+                    <td>₹{{total}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+
+        <div class="total">
+            <strong>Grand Total: {{GrandTotal}}</strong>
+        </div>
+
+        <div class="footer">
+            Thank you for your purchase!<br>
+            This is a computer-generated invoice.
+        </div>
+    </div>
+</body>
+
+</html>
