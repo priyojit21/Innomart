@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Sidebar from "../../components/Seller/Sidebar";
 import Navbar from "../../components/Seller/Navbar";
 import upload from "../../assets/seller/upload.svg";
-import { FileUploader } from "react-drag-drop-files";
+// import { FileUploader } from "react-drag-drop-files";
 import { Select, Switch } from "antd";
 import axiosInstance from "../../middleware/axiosInterceptor";
 import { Controller, useFieldArray, useForm } from "react-hook-form";
@@ -356,7 +356,7 @@ const EditProduct = () => {
                   <div className="mt-[9px] grid grid-cols-1 md:grid-cols-3 gap-[10px] lg:w-[470px] pb-[10px]">
                     {/* Image uploader */}
                     <div className="w-[250px] lg:max-w-[150px] bg-[#EDF2FC] border border-dashed border-[#BDCEF1] lg:pt-[24px] lg:pb-[17px] py-[40px] mt-[10px] rounded-[10px] flex flex-col items-center mx-auto md:mx-[10px] overflow-hidden">
-                      <FileUploader
+                      {/* <FileUploader
                         handleChange={handleImageChange}
                         name="file"
                         types={["JPG", "JPEG", "PNG"]}
@@ -366,7 +366,26 @@ const EditProduct = () => {
                         <p className="font-man text-[12px] w-[100px] text-center">
                           Drag & Drop image file here
                         </p>
-                      </FileUploader>
+                      </FileUploader> */}
+                      <label
+                        htmlFor="imageInput"
+                        className="flex flex-col items-center justify-center border-2 border-dashed border-gray-400 rounded-lg p-4 cursor-pointer hover:bg-gray-100 transition-all"
+                      >
+                        <img src={upload} className="mb-[9px] mx-auto" alt="Upload Icon" />
+                        <p className="font-man text-[12px] w-[100px] text-center">
+                          Drag & Drop image file here
+                        </p>
+                        <input
+                          id="imageInput"
+                          type="file"
+                          name="file"
+                          accept=".jpg,.jpeg,.png"
+                          multiple={false}
+                          onChange={handleImageChange}
+                          className="hidden"
+                        />
+                      </label>
+
                     </div>
 
 
@@ -403,7 +422,7 @@ const EditProduct = () => {
                 <div className="flex gap-[10px] items-center flex-wrap mr-[5px]">
                   {/* Video uploader */}
                   <div className="w-[250px] lg:max-w-[150px] bg-[#EDF2FC] border border-dashed border-[#BDCEF1] lg:pt-[24px] lg:pb-[17px] py-[40px] mt-[20px] rounded-[10px] flex flex-col items-center mx-auto md:mx-[10px] overflow-hidden">
-                    <FileUploader
+                    {/* <FileUploader
                       handleChange={handleVideoChange}
                       name="video"
                       types={["MP4", "WebM", "MKV"]}
@@ -413,7 +432,26 @@ const EditProduct = () => {
                       <p className="font-man text-[12px] w-[100px] text-center">
                         Drag & Drop video file here
                       </p>
-                    </FileUploader>
+                    </FileUploader> */}
+                    <label
+                      htmlFor="videoInput"
+                      className="flex flex-col items-center justify-center border-2 border-dashed border-gray-400 rounded-lg p-4 cursor-pointer hover:bg-gray-100 transition-all"
+                    >
+                      <img src={upload} className="mb-[9px] mx-auto" alt="Upload Icon" />
+                      <p className="font-man text-[12px] w-[100px] text-center">
+                        Drag & Drop video file here
+                      </p>
+                      <input
+                        id="videoInput"
+                        type="file"
+                        name="video"
+                        accept=".mp4,.webm,.mkv"
+                        multiple={false}
+                        onChange={handleVideoChange}
+                        className="hidden"
+                      />
+                    </label>
+
                   </div>
 
 
