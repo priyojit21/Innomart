@@ -34,7 +34,7 @@ import SellerHome from "./pages/Business/SellerHome.jsx";
 import EditCoupon from "./pages/Business/EditCoupon.jsx";
 import EditUserDetails from "./pages/User/EditUserDetails.jsx";
 import ReviewManagement from "./pages/Business/ReviewManagement.jsx";
-import EditProduct from "./pages/Business/editProduct.jsx";
+import EditProduct from "./pages/Business/EditProduct.jsx";
 import BusinessProtectedRoute from "./components/protectedRoutes/BusinessProtectedRoute.jsx";
 import Sellerprofile from "./pages/Business/Sellerprofile.jsx";
 
