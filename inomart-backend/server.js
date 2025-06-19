@@ -108,3 +108,7 @@ io.on("connection", (socket) => {
     socket.to(receiverId.toString()).emit("receive_chat", newChat);
   });
 });
+
+app.get("/",(req,res) => {
+  res.send("App running");
+});
