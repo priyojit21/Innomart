@@ -5,8 +5,8 @@ import girl2 from "../assets/Hero/girl2.jpeg";
 import girl3 from "../assets/Hero/girl3.jpeg";
 import girl7 from "../assets/Hero/girl7.jpg";
 import girl6 from "../assets/Hero/girl6.jpg";
-import girl from "../assets/hero/girl.jpg";
-import newGirl from "../assets/hero/newGirl.jpg";
+import girl from "../assets/Hero/girl.jpg";
+import newGirl from "../assets/Hero/newGirl.jpg";
 import axiosInstance from "../middleware/axiosInterceptor";
 
 const Carousel = () => {
