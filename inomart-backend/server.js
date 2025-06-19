@@ -55,6 +55,10 @@ app.use("/notify", notificationRoute);
 app.use("/chat", chatRoute);
 app.use("/category", categoryRoute);
 
+app.get("/",(req,res) => {
+  res.send("App running");
+});
+
 app.use((req, res) => {
   res
     .status(statusCode.NOT_FOUND)
@@ -109,6 +113,3 @@ io.on("connection", (socket) => {
   });
 });
 
-app.get("/",(req,res) => {
-  res.send("App running");
-});
