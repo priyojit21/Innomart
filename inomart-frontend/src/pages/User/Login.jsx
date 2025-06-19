@@ -35,7 +35,7 @@ export const Login = () => {
   async function userLogin(data) {
     try {
       const response = await axiosInstance.post(
-        "http://localhost:3000/user/login",
+        "user/login",
         data
       );
       if (response.data.message[0].email === "Invalid email address") {
