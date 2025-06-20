@@ -23,7 +23,7 @@ export const BusinessInformation = () => {
   useEffect(() => {
     const fetchCountries = async () => {
       try {
-        const response = await axiosInstance.get("https://restcountries.com/v3.1/all");
+        const response = await axiosInstance.get("https://restcountries.com/v3.1/all?fields=name,cca2");
         const countryData = response.data.map((country) => ({
           code: country.cca2,
           value: country.name.common,
